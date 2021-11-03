@@ -9,6 +9,8 @@ Projeto desenvolvido para o evento potência tech da Kenzie Academy Brasil em pa
 
 ## O projeto
 
+### Estrutura de arquivos
+
 - README.md
 - index.html
 - /assets
@@ -17,6 +19,18 @@ Projeto desenvolvido para o evento potência tech da Kenzie Academy Brasil em pa
     - style.css
   - /js
     - script.js
+
+### Fonte
+
+- 'Montserrat', sans-serif;
+
+### Cores
+
+- Vermelho Ifood: #EA1D2C;
+- Cinza escuro: #3E3E3E;
+- Cinza: #717171;
+- Cinza claro: #717171
+- Azul Kenzie: #0000FF;
 
 ## Layout
 
