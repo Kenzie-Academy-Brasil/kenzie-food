@@ -4,8 +4,7 @@ Projeto desenvolvido para o evento potência tech da Kenzie Academy Brasil em pa
 
 ## Ferramentas
 
-1. [Instalação do VS Code no Windows](https://kenzie.com.br/blog/instalacao-vs-code-windows/)
-2. [Como utilizar o codepen e o VSCode](https://kenzie-academy-brasil.github.io/ferramentas/)
+1. [Plataforma](https://participe.kenzie.com.br/desafios)
 
 ## O projeto
 
