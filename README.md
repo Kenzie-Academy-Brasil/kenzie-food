@@ -6,6 +6,11 @@ Projeto desenvolvido para o evento potência tech da Kenzie Academy Brasil em pa
 
 1. [Plataforma](https://participe.kenzie.com.br/desafios)
 
+## Checkpoints aulas
+
+1. [Aula 1: Introdução ao HTML e estruturação do projeto](https://kenzieacademybr.notion.site/Checkpoint-99d1642bb370432487172a6b7d62c824)
+2. [Aula 2: Introdução ao CSS e estilização do projeto](https://kenzieacademybr.notion.site/Checkpoint-a826188d43ad4cb495aab16b674cf2e5)
+
 ## O projeto
 
 ### Estrutura de arquivos
