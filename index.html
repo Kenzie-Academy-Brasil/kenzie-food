@@ -6,24 +6,42 @@
     <head>
         <meta charset="UTF-8">
         <title>Projeto Ifood</title>
+
+        <!-- RESET CSS -->
+        <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+
+        <!-- FONTES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+        <!-- STYLE -->
+        <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+
     </head>
 
     <!-- CORPO - CONTEÚDO -->
     <body>
         
         <!-- CABEÇALHO -->
-        <header>
+        <header class="cabecalho">
 
-            <div>
-                <figure>
-                    <img src="./assets/img/logo.png" alt="Logo Ifood">
-                    <figcaption>Logo</figcaption>
-                </figure>
-            </div>
+            <div class="container">
 
-            <div>
-                <img src="./assets/img/restaurante.png" alt="Restaurante">
-                <p>Restaurante</p>
+                <div class="cabecalho__logoIfood">
+                    <figure>
+                        <img src="./assets/img/logo.png" alt="Logo Ifood">
+                        <figcaption>Logo</figcaption>
+                    </figure>
+                </div>
+
+                <div class="cabecalho__restaurante">
+                    <div class="cabecalho__fundoImagem">
+                        <img src="./assets/img/restaurante.png" alt="Restaurante">
+                    </div>
+                    <p>Restaurante</p>
+                </div>
+
             </div>
 
         </header>
@@ -31,103 +49,106 @@
         <main>
 
             <!-- SEÇÃO INFORMAÇÕES DO RESTAURANTE -->
-            <section>
+            <section class="secaoInfoRestaurante">
                
-                <!-- INFORMAÇÕES DO RESTAURANTE -->
-                <div>
-                    <figure>
-                        <img src="./assets/img/logo-kenzie.png" alt="Kenzie Foods">
-                        <figcaption>Restaurante Kenzie Foods</figcaption>
-                    </figure>
-                    <h1>Kenzie Foods</h1>
-                </div>
+                <div class="container">
+                    <!-- INFORMAÇÕES DO RESTAURANTE -->
+                    <div class="secaoInfoRestaurante__descricao">
+                        <figure class="secaoInfoRestaurante__logoRestaurante">
+                            <img src="./assets/img/logo-kenzie.png" alt="Kenzie Foods">
+                            <figcaption>Restaurante Kenzie Foods</figcaption>
+                        </figure>
+                        <h1 class="secaoInfoRestaurante__nomeRestaurante">Kenzie Foods</h1>
+                    </div>
 
-                <!-- CAIXA DE BUSCA -->
-                <div>
-                    <button>
-                        <img src="./assets/img/lupa.png" alt="">
-                    </button>
-                    <input type="text" placeholder="Buscar no cardápio">
+                    <!-- CAIXA DE BUSCA -->
+                    <div class="secaoInfoRestaurante__pesquisar">
+                        <button>
+                            <img src="./assets/img/lupa.png" alt="">
+                        </button>
+                        <input type="text" placeholder="Buscar no cardápio">
+                    </div>
                 </div>
 
             </section>
 
             <!-- SEÇÃO PRATOS EM DESTAQUES -->
-            <section>
-                <h2>Destaque</h2>
-                
-                <!-- LISTA DE PRATOS EM DESTAQUE -->
-                <ul>
-                    <li>
-                        <a href="">
-                            <figure>
-                                <img src="./assets/img/produto.png" alt="Combo hamburguer + batata frita">
-                                <figcaption>Combo hamburguer + batata frita</figcaption>
-                            </figure>
-                            <h3>Combo hamburguer + batata frita</h3>
-                            <span>R$ 21,90</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <figure>
-                                <img src="./assets/img/produto.png" alt="Porção onion rings">
-                                <figcaption>Porção onion rings</figcaption>
-                            </figure>
-                            <h3>Porção onion rings</h3>
-                            <span>R$ 21,90</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <figure>
-                                <img src="./assets/img/produto.png" alt="3 Cookies tradicionais">
-                                <figcaption>3 Cookies tradicionais</figcaption>
-                            </figure>
-                            <h3>3 Cookies tradicionais</h3>
-                            <span>R$ 21,90</span>
-                        </a>
-                    </li>
-                </ul>
-
+            <section class="secaoPratosDestaque">
+                <div class="container">
+                    <h2 class="secaoPratosDestaque__titulo">Destaque</h2>
+                    
+                    <!-- LISTA DE PRATOS EM DESTAQUE -->
+                    <ul class="secaoPratosDestaque__listaPratos">
+                        <li class="secaoPratosDestaque__itemPrato">
+                            <a href="">
+                                <figure class="secaoPratosDestaque__imagemPrato">
+                                    <img src="./assets/img/produto.png" alt="Combo hamburguer + batata frita">
+                                    <figcaption>Combo hamburguer + batata frita</figcaption>
+                                </figure>
+                                <h3 class="secaoPratosDestaque__nomePrato">Combo hamburguer + batata frita</h3>
+                                <span class="secaoPratosDestaque__precoPrato">R$ 21,90</span>
+                            </a>
+                        </li>
+                        <li class="secaoPratosDestaque__itemPrato">
+                            <a href="">
+                                <figure class="secaoPratosDestaque__imagemPrato">
+                                    <img src="./assets/img/produto.png" alt="Combo hamburguer + batata frita">
+                                    <figcaption>Combo hamburguer + batata frita</figcaption>
+                                </figure>
+                                <h3 class="secaoPratosDestaque__nomePrato">Combo hamburguer + batata frita</h3>
+                                <span class="secaoPratosDestaque__precoPrato">R$ 21,90</span>
+                            </a>
+                        </li>
+                        <li class="secaoPratosDestaque__itemPrato">
+                            <a href="">
+                                <figure class="secaoPratosDestaque__imagemPrato">
+                                    <img src="./assets/img/produto.png" alt="Combo hamburguer + batata frita">
+                                    <figcaption>Combo hamburguer + batata frita</figcaption>
+                                </figure>
+                                <h3 class="secaoPratosDestaque__nomePrato">Combo hamburguer + batata frita</h3>
+                                <span class="secaoPratosDestaque__precoPrato">R$ 21,90</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </section>
 
             <!-- SEÇÃO SOBREMESAS -->
-            <section>
-                <h2>Sobremesas</h2>
-                <ul>
-                    <li>
+            <section class="secaoSobremesas">
+                <h2 class="secaoSobremesas__titulo">Sobremesas</h2>
+                <ul class="secaoSobremesas__listaSobremesas">
+                    <li class="secaoSobremesas__iteSobremesa">
                         <a href="">
                            
                             <!-- INFORMAÇÕES DO PRATO -->
-                            <div>
+                            <div class="secaoSobremesas__descricaoSobremesa">
                                 <h3>Brownie de chocolate</h3>
                                 <p>O clássico brownie para quem ama um docinho de sobremesa.</p>
                                 <span>R$ 18,00</span>
                             </div>
 
-                            <figure>
+                            <figure class="secaoSobremesas__imagemSobremesa">
                                 <img src="./assets/img/sobremesa.png" alt="Brownie de chocolate">
                                 <figcaption>Brownie de chocolate</figcaption>
                             </figure>
 
                         </a>
                     </li>
-                    <li>
+                    <li class="secaoSobremesas__iteSobremesa">
                         <a href="">
                            
                             <!-- INFORMAÇÕES DO PRATO -->
-                            <div>
-                                <h3>Milkshake de morango com ninho 300 ml</h3>
-                                <p>Combinação perfeita de sorvete de Baunilha, deliciosa mescla de morango e Ninho.</p>
+                            <div class="secaoSobremesas__descricaoSobremesa">
+                                <h3>Brownie de chocolate</h3>
+                                <p>O clássico brownie para quem ama um docinho de sobremesa.</p>
                                 <span>R$ 18,00</span>
                             </div>
 
-                            <figure>
-                                <img src="./assets/img/sobremesa.png" alt="Milkshake de morango com ninho 300 ml">
-                                <figcaption>Milkshake de morango com ninho 300 ml</figcaption>
+                            <figure class="secaoSobremesas__imagemSobremesa">
+                                <img src="./assets/img/sobremesa.png" alt="Brownie de chocolate">
+                                <figcaption>Brownie de chocolate</figcaption>
                             </figure>
-                            
+
                         </a>
                     </li>
                 </ul>
@@ -168,7 +189,6 @@
             </section>
 
         </main>
-
 
     </body>
 

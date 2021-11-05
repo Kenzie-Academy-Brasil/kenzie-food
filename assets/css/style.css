@@ -1,0 +1,167 @@
+/*
+- CSS = Cascading StyleSheet
+
+- Anatomia de uma regra CSS
+
+seletor {
+    propriedade: valor da propriedade; // declaração css
+    cor de fundo: vermelho;
+} => regra css
+
+font-family: 'Montserrat', sans-serif;
+
+*/
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+/* CABRÇALHO */
+.cabecalho{
+    background-color: #F7F7F7;
+    border-bottom: 2px solid #DCDCDC;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.cabecalho > .container{
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho__logoIfood{
+    margin-right: 60px;
+}
+.cabecalho__logoIfood > figure{}
+.cabecalho__logoIfood > figure > img{
+    width: 90px;
+}
+.cabecalho__logoIfood > figure > figcaption{
+    display: none;
+}
+
+.cabecalho__restaurante{
+    display: flex;
+    align-items: center;
+}
+.cabecalho__fundoImagem{
+    background-color: #EA1D2C;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    padding-top: 6px;
+    margin-right: 16px;
+}
+
+.cabecalho__fundoImagem > img{
+    width: 50px;
+}
+.cabecalho__restaurante > p{
+    color: #717171;
+    font-weight: 600;
+}
+
+/* PRINCIPAL */
+main{}
+
+/* SEÇÃO INFORMAÇÕES RESTAURANTE */
+.secaoInfoRestaurante{
+    margin-top: 40px;
+    margin-bottom: 70px;
+}
+.secaoInfoRestaurante > .container{}
+
+.secaoInfoRestaurante__descricao{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.secaoInfoRestaurante__logoRestaurante{
+    background-color: #0000FF;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    border-radius: 100%;
+    padding-top: 8px;
+    margin-right: 20px;
+}
+.secaoInfoRestaurante__logoRestaurante > img{
+    width: 25px;
+}
+.secaoInfoRestaurante__logoRestaurante > figcaption{
+    display: none;
+}
+
+.secaoInfoRestaurante__nomeRestaurante{
+    font-weight: 600;
+    color: #717171;
+}
+
+.secaoInfoRestaurante__pesquisar{
+    display: flex;
+    border: 1px solid #F4F4F4;
+}
+.secaoInfoRestaurante__pesquisar > button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.secaoInfoRestaurante__pesquisar > button > img{
+    width: 52px;
+}
+.secaoInfoRestaurante__pesquisar > input{
+    border: none;
+    outline: none;
+}
+
+/* SEÇÃO PRATOS EM DESTAQUES */
+.secaoPratosDestaque{}
+.secaoPratosDestaque__titulo{
+    font-size: 28px;
+    font-weight: 600;
+    color: #3E3E3E;
+    margin-bottom: 30px;
+}
+
+.secaoPratosDestaque__listaPratos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.secaoPratosDestaque__itemPrato{
+    width: 31%;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding-bottom: 15px;
+}
+.secaoPratosDestaque__itemPrato > a{
+    color: #3E3E3E;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.secaoPratosDestaque__imagemPrato{}
+.secaoPratosDestaque__imagemPrato > img{
+    width: 100%;
+}
+.secaoPratosDestaque__imagemPrato > figcaption{
+    display: none;
+}
+
+.secaoPratosDestaque__nomePrato{
+    padding-bottom: 90px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.secaoPratosDestaque__precoPrato{
+    display: inline-block;
+    padding-left: 15px;
+}
