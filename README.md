@@ -10,6 +10,7 @@ Projeto desenvolvido para o evento potência tech da Kenzie Academy Brasil em pa
 
 1. [Aula 1: Introdução ao HTML e estruturação do projeto](https://kenzieacademybr.notion.site/Checkpoint-99d1642bb370432487172a6b7d62c824)
 2. [Aula 2: Introdução ao CSS e estilização do projeto](https://kenzieacademybr.notion.site/Checkpoint-a826188d43ad4cb495aab16b674cf2e5)
+3. [Aula 3: Introdução ao Javascript](https://kenzieacademybr.notion.site/Checkpoint-412e5ee0dc9f45a690806c776670ce8d)
 
 ## O projeto
 
