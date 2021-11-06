@@ -1,131 +1,120 @@
+const listaPratos = [
+    {
+        id: 0,
+        nome: 'Combo hamburguer + batata frita 1',
+        descricao: 'Hamburguer com batata frita',
+        preco: 21.15,
+        categoria: 'destaques',
+        imagem: './assets/img/produto.png'
+    },
+    {
+        id: 1,
+        nome: 'Combo hamburguer + batata frita 2',
+        descricao: 'Hamburguer com batata frita',
+        preco: 21.25,
+        categoria: 'destaques',
+        imagem: './assets/img/produto.png'
+    },
+    {
+        id: 2,
+        nome: 'Combo hamburguer + batata frita 3',
+        descricao: 'Hamburguer com batata frita',
+        preco: 19.90,
+        categoria: 'destaques',
+        imagem: './assets/img/produto.png'
+    },
+    {
+        id: 3,
+        nome: 'Brownie de chocolate 1',
+        descricao: 'O clássico brownie para quem ama um docinho de sobremesa.',
+        preco: 15.90,
+        categoria: 'sobremesas',
+        imagem: './assets/img/sobremesa.png'
+    },
+    {
+        id: 4,
+        nome: 'Brownie de chocolate 2',
+        descricao: 'O clássico brownie para quem ama um docinho de sobremesa.',
+        preco: 45.90,
+        categoria: 'sobremesas',
+        imagem: './assets/img/sobremesa.png'
+    },
+    {
+        id: 5,
+        nome: 'Brownie de chocolate Nova Sobremesa',
+        descricao: 'O clássico brownie para quem ama um docinho de sobremesa.',
+        preco: 100.90,
+        categoria: 'sobremesas',
+        imagem: './assets/img/sobremesa.png'
+    }
+];
 
+let listaDestaque = document.querySelector(".secaoPratosDestaque__listaPratos")
+let listaSobreMesas = document.querySelector(".secaoSobremesas__listaSobremesas")
 
-//VARIÁVEIS//
-let nomeHudson = "Hudson"
-let nomeMaria  = "Maria"
-//const nome = "Daniel" 
+//FUNÇÃO QUE MONTA OS PRATOS DESTAQUES
+function construirLayoutPratos(ulContainer, prato, classePrato){
+    //RECEBER O PRATO
+    //MONTAR AS TAGS HTML
+    //ADICIONAR AS INFORMAÇOES NASTAGS 
+    //PRECISO DE UMA REFERENCIA DE ONDE VOU COLOCAR ESSE PRATO
+    //JOGAR NA TELA O TEMPLATE MONTADO 
+   
+    let li = document.createElement("li")
+    let a = document.createElement("a")
+   
+    let figure = document.createElement("figure")
+    let img = document.createElement("img")
+    img.src = prato.imagem
+    img.alt = prato.nome
 
-//TIPOS DE DADOS//
+    let figcaption = document.createElement("figcaption")
+    figcaption.innerText = prato.nome
 
-//INT - INTEIRO -> NUMEROS 
-let numero1 = 1
-let numero2 = 2
-//console.log(numero1)
+    let div = document.createElement("div")
+    let h3 = document.createElement("h3")
+    h3.innerText = prato.nome
 
+    let p = document.createElement("p")
+    p.innerText = prato.descricao
 
-//STRING - TUDO QUE É DO TIPO TEXTO
-let nome = "Hudson "
-let sobrenome = "Carolino"
-//CONCATENAR
+    let span = document.createElement("span")
+    span.innerText = prato.preco
 
+    li.appendChild(a)
 
-//BOOLEAN
-//true  => VERDADEIRO 
-//false => FALSO  
+    //MONTANDO IMAGEM
+    figure.appendChild(img)
+    figure.appendChild(figcaption)
+    a.appendChild(figure)
 
-//TIPO DE DADOS OBJETOS
+    div.appendChild(h3)
 
-
-//ARRAY
-let nomes = ["Maria","Daniel","Andréia","Lucino", "João Guilherme","Hudson"]
-let numeros = [1,2,4,45,65,345,56]
-let numerosNomes = ["Hudson",2,"Maria",45,65,345,56]
-
-
-
-
-//console.log(alunos)
-//NOME: Hudson
-//Idade: 25
-//Nota: 60
-
-//OBJETOS
-//CRIANDO ALUNO HUDSON
-const hudson = {
-    nome: "Hudson",
-    sobreNome: "Carolino",
-    idade: "25",
-    cursando:"Front-end",
-    escola: "Kenzie" 
-}
-
-//CRIANDO ALUNA MARIA
-const maria = {
-    nome: "Maria",
-    sobreNome: "Porcina",
-    idade: "21",
-    cursando:"Front-end",
-    escola: "Kenzie" 
-}
-
-//LISTA DE ALUNOS
-let alunos  = []
-
-//ENVIANDO O ALUNO HUDSON PARA DENTRO DA LISTA => ARRAY
-alunos.push(hudson)
-
-//ENVIANDO O ALUNA MARIA PARA DENTRO DA LISTA => ARRAY
-alunos.push(maria)
-
-//console.log(alunos)
-
-
-
-//CONDICIONAIS IF E ELSE 
-// IF =>   SE (idade do hudson > 18) => maior idade   
-// ELSE => SENÃO  => menor idade
-
-
-if("1" !== "1"){
-
-    //console.log("diferente") 
-  
-
-}else{
-
-    //console.log("igual") 
-
-}
-
-//FUNÇÕES 
-
-function somaNumeros(){
-    
-    //ESCOPO DA FUNÇÃO
-    //ADICIONAMOS AS INSTRUÇÕES DO QUE ELA PRECISA
-    console.log("Estou somando 2 numeros")
-    let numero1 = 10
-    let numero2 = 20
-
-    let resultado  = numero1 + numero2
-    console.log(resultado)
-
-}
-
-//CHAMANDO FUNÇÃO
-//somaNumeros()
-
-
-function atingiuMaiorIdade(valorIdade){
-
-    if(valorIdade >= 18){
-        console.log("Atingiu maior idade")
-    }else{
-        console.log("Não atingiu maior idade")
+    if(prato.categoria === "sobremesas"){
+        div.appendChild(p)
     }
 
-}
-atingiuMaiorIdade(20)
-atingiuMaiorIdade(12)
-atingiuMaiorIdade(50)
+    div.appendChild(span)
+    a.appendChild(div)
 
-
-function soma(numero1, numero2){
-
-    return numero1 + numero2
+    li.classList.add(classePrato)
+    ulContainer.appendChild(li)
 
 }
 
-let resultado  = soma(2,5)
+for(let cont = 0; cont < listaPratos.length; cont++){
+    let prato = listaPratos[cont]
 
-console.log(resultado)
+    if(prato.categoria === "destaques"){
+        construirLayoutPratos(listaDestaque,prato, "secaoPratosDestaque__itemPrato")
+    }else {
+        construirLayoutPratos(listaSobreMesas,prato, "secaoSobremesas__itemSobremesa")
+    }
+    
+}
+
+
+
+
+
+
