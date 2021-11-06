@@ -51,6 +51,9 @@ const listaPratos = [
 
 let listaDestaque = document.querySelector(".secaoPratosDestaque__listaPratos")
 let listaSobreMesas = document.querySelector(".secaoSobremesas__listaSobremesas")
+let listaCarrinho = document.querySelector('.secaoCarrinho__listaItens');
+
+const containerTotal = document.querySelector('.secaoCarrinho__total > span');
 
 //FUNÇÃO QUE MONTA OS PRATOS DESTAQUES
 function construirLayoutPratos(ulContainer, prato, classePrato){
@@ -79,9 +82,10 @@ function construirLayoutPratos(ulContainer, prato, classePrato){
     p.innerText = prato.descricao
 
     let span = document.createElement("span")
-    span.innerText = prato.preco
+    span.innerText = prato.preco.toFixed(2)
 
     li.appendChild(a)
+    li.dataset.id = prato.id;
 
     //MONTANDO IMAGEM
     figure.appendChild(img)
@@ -100,6 +104,8 @@ function construirLayoutPratos(ulContainer, prato, classePrato){
     li.classList.add(classePrato)
     ulContainer.appendChild(li)
 
+    li.addEventListener('click', adicionarNoCarrinho);
+
 }
 
 for(let cont = 0; cont < listaPratos.length; cont++){
@@ -113,8 +119,65 @@ for(let cont = 0; cont < listaPratos.length; cont++){
     
 }
 
+function construirLayoutCarrinho(prato) {
+    const li = document.createElement('li');
+    const div = document.createElement('div');
+    const h3 = document.createElement('h3');
+    const span = document.createElement('span');
+    const button = document.createElement('button');
+
+    h3.innerText = prato.nome;
+    span.innerText = prato.preco.toFixed(2);
+    button.innerText = 'Remover';
+
+    div.appendChild(h3);
+    div.appendChild(span);
+
+    li.appendChild(div);
+    li.appendChild(button);
+
+    li.classList.add('secaoCarrinho__item');
+
+    listaCarrinho.appendChild(li);
+
+    button.addEventListener('click', removerDoCarrinho);
+}
 
 
+function adicionarNoCarrinho(evento) {
+    // passo 1 - capturar prato clicado
+        // - capturar id do prato clicado
+    // passo 2 - adicionar no carrinho
+        // - construir layout do carrinho
+        // - fazer o append dos elementos para o carrinho
 
+    const elementoClicado = evento.currentTarget;
+    const idElementoClicado = elementoClicado.dataset.id;
 
+    const pratoSelecionado = listaPratos[idElementoClicado];
 
+    construirLayoutCarrinho(pratoSelecionado);
+    atualizarTotal();
+}
+
+function removerDoCarrinho(evento) {
+    const elementoClicado = evento.currentTarget;
+    const elementoPai = elementoClicado.parentElement;
+
+    elementoPai.remove();
+    atualizarTotal();
+}
+
+function atualizarTotal() {
+    const listaPrecos = document.querySelectorAll('.secaoCarrinho__item > div > span');
+
+    let total = 0;
+    for(let contador = 0; contador < listaPrecos.length; contador++){
+        const elementoSpan = listaPrecos[contador];
+        const precoNumero = Number(elementoSpan.innerText);
+        total += precoNumero;
+    }
+
+    total = total.toFixed(2);
+    containerTotal.innerText = total;
+}
